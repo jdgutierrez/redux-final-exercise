@@ -1,0 +1,11 @@
+export const ADD_TEAM = 'ADD_TEAM';
+export const MODIFY_TEAM = 'MODIFY_TEAM';
+export const DELETE_TEAM = 'DELETE_TEAM';
+
+export const CREATE_MATCHES = 'CREATE_MATCHES';
+
+export const ADD_RESULT = 'ADD_RESULT';
+export const ADD_STATISTICS = 'ADD_STATISTICS';
+
+export const SHOW_NOTIFICATION = 'SHOW_NOTIFICATION';
+export const HIDE_NOTIFICATION = 'HIDE_NOTIFICATION';

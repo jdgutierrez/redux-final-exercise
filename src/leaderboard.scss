@@ -1,0 +1,11 @@
+.leaderboard {
+    .team {
+        display: flex;
+        div {
+            min-width: 80px;
+        }
+        .teamname {
+            flex: 1;
+        }
+    }
+}

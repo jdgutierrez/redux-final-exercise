@@ -1,0 +1,15 @@
+.nav {
+    background: grey;
+    display: flex;
+    a {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: white;
+            background-color: darken($color: grey, $amount: 20%);
+        }
+    }
+}

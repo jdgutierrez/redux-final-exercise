@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import Teams from './teams';
+import Matches from './matches';
+import Leaderboard from './leaderboard';
+import { persistor } from './store';
+import Notification from './notification';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <div className="nav">
+          <Link to="/teams">Teams</Link>
+          <Link to="/matches">Matches</Link>
+          <Link to="/leaderboard">Leaderboard</Link>
+        </div>
+        <Switch>
+          <Route exact path={['/teams', '/']}>
+            <Teams />
+          </Route>
+          <Route path='/matches'>
+            <Matches />
+          </Route>
+          <Route path='/leaderboard'>
+            <Leaderboard />
+          </Route>
+        </Switch>
+        {/* <button onClick={() => {
+          persistor.purge();
+        }}>Clear persistor</button> */}
+        <Notification />
+      </div>
+    </BrowserRouter>
   );
 }
 
